@@ -1,0 +1,24 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: install dependencies
+      run: |
+        sudo apt install -y clang llvm libcjson-dev libcurl4-openssl-dev
+    - name: make
+      run: make
+    - name: sudo make install
+      run: sudo make install 
+    - name: make clean
+      run: make clean
