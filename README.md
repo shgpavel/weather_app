@@ -1,3 +1,5 @@
+> Moved to https://git.sr.ht/~shgpavel/weather_app
+
 ## Overview
 A simple application that creates ```/opt/weather_app/weather``` file
 with current geolocation weather data
